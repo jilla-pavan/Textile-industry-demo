@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #111827;
+    background-color: #F9FAFB;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-white font-semibold px-8 py-4 inline-flex items-center gap-2 transition-all duration-300 hover:bg-accent-dark hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-0.5;
+  }
+  
+  .btn-outline {
+    @apply border border-accent text-accent font-semibold px-8 py-4 inline-flex items-center gap-2 transition-all duration-300 hover:bg-accent hover:text-white;
+  }
+
+  .btn-ghost {
+    @apply text-white border border-white/30 font-semibold px-8 py-4 inline-flex items-center gap-2 transition-all duration-300 hover:bg-white hover:text-primary;
+  }
+
+  .section-label {
+    @apply text-accent font-body font-semibold tracking-[0.2em] uppercase text-sm;
+  }
+
+  .section-title {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight;
+  }
+
+  .card-premium {
+    @apply bg-white shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #C19A6B, #A07C50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-texture {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C19A6B' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .divider-accent {
+    @apply w-16 h-0.5 bg-accent;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F9FAFB;
+}
+::-webkit-scrollbar-thumb {
+  background: #C19A6B;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A07C50;
+}
+
+/* Smooth nav highlight */
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #C19A6B;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}

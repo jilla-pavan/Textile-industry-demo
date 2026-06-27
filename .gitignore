@@ -1,0 +1,74 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+out/
+coverage/
+
+# Cache
+.cache/
+.tmp/
+temp/
+*.cache
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+env/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Package lock files (optional)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Test reports
+coverage/
+*.lcov
+
+# Archives
+*.zip
+*.tar
+*.gz
+*.rar
+
+# Runtime files
+*.pid
+*.seed
+*.pid.lock
+
+# Misc
+*.bak
+*.tmp
